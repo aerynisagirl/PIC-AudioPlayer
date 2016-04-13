@@ -1,2 +1,2 @@
 # PIC-Audio-Player
-Just a small project that plays small audio files from a PIC micro as a single chip solution, very limited within the functionality though it works.
+Just a small project that plays small audio files from a PIC micro as a single chip solution, very limited within the functionality though it works. It's based on the use of PCM data, that is then put into an array where each location in the array represents an induvidual sample of the recording. The PIC micro then plays the recording by quickly reading the samples at a very high speed of about 8000Hz. This all happens at the push of a button.
