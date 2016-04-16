@@ -72,5 +72,10 @@ void main() {
 
 //Interrupt Function, called upon the occurrence of an interrupt to the PIC MCU
 void interrupt onInterrupt() {
-    
+    //Check to see if the interrupt was caused by Timer0 overflowing
+    if (TMR0IF) {
+        TMR0IF = 0x00;  //Clear the Timer0 overflow interrupt flag to prevent false interrupts in the future
+        
+        //To do, write playback code.
+    }
 }
