@@ -11,17 +11,17 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 F F 2 2
-config CONFIG 0 8007 8007 2 2
 $dist/default/production\PIC_Audio_Player.X.production.obj
 cinit CODE 0 11 11 4 2
-text1 CODE 0 17DB 17DB 25 2
-maintext CODE 0 17D7 17D7 4 2
+text1 CODE 0 17D6 17D6 2A 2
+maintext CODE 0 17D2 17D2 4 2
 cstackCOMMON COMMON 1 70 70 1 1
 intentry CODE 0 4 4 B 2
 stringtext STRCODE 0 15 15 1770 2
+$C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 F F 2 2
+config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -52,10 +52,10 @@ BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
-CONST 1785-17D6 2
+CONST 1785-17D1 2
 CONST 1800-1FFF 2
 ENTRY 2-3 2
-ENTRY 1785-17D6 2
+ENTRY 1785-17D1 2
 ENTRY 1800-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -82,7 +82,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 2000-23EF 1
 CODE 2-3 2
-CODE 1785-17D6 2
+CODE 1785-17D1 2
 CODE 1800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -101,10 +101,10 @@ BIGRAM 2000-23EF 1
 COMMON 71-7D 1
 EEDATA F000-F0FF 2
 STRCODE 2-3 2
-STRCODE 1785-17D6 2
+STRCODE 1785-17D1 2
 STRCODE 1800-1FFF 2
 STRING 2-3 2
-STRING 1785-17D6 2
+STRING 1785-17D1 2
 STRING 1800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -120,36 +120,39 @@ STRING 1800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIC_Audio_Player.X.production.obj
-11 cinit CODE >6426:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-11 cinit CODE >6429:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-11 cinit CODE >6435:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-11 cinit CODE >6437:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-12 cinit CODE >6438:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-13 cinit CODE >6439:C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.
-4 intentry CODE >82:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-9 intentry CODE >84:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-A intentry CODE >85:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-B intentry CODE >89:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17DB text1 CODE >41:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17DB text1 CODE >43:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17DE text1 CODE >44:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17E0 text1 CODE >47:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17E2 text1 CODE >48:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17E4 text1 CODE >49:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17E7 text1 CODE >50:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17E9 text1 CODE >52:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17EC text1 CODE >53:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17EE text1 CODE >54:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17F0 text1 CODE >55:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17F2 text1 CODE >58:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17F4 text1 CODE >59:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17F7 text1 CODE >60:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17FA text1 CODE >61:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17FD text1 CODE >64:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17FF text1 CODE >65:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17D7 maintext CODE >68:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17D7 maintext CODE >69:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17DA maintext CODE >72:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+11 cinit CODE >6432:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+11 cinit CODE >6435:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+11 cinit CODE >6441:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+11 cinit CODE >6443:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+12 cinit CODE >6444:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+13 cinit CODE >6445:C:\Users\MACFRE~1\AppData\Local\Temp\s9io.
+4 intentry CODE >85:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+9 intentry CODE >87:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+A intentry CODE >88:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+B intentry CODE >92:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D6 text1 CODE >41:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D6 text1 CODE >43:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D9 text1 CODE >44:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17DB text1 CODE >47:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17DD text1 CODE >48:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17DF text1 CODE >49:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17E2 text1 CODE >50:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17E4 text1 CODE >52:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17E7 text1 CODE >53:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17E9 text1 CODE >54:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17EB text1 CODE >55:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17ED text1 CODE >58:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17EF text1 CODE >59:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17F2 text1 CODE >60:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17F5 text1 CODE >61:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17F8 text1 CODE >64:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17FA text1 CODE >65:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17FC text1 CODE >66:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17FE text1 CODE >67:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17FF text1 CODE >68:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D2 maintext CODE >71:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D2 maintext CODE >72:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17D5 maintext CODE >75:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -180,11 +183,11 @@ _LATA 10C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _LATC 10E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _WPUC 20E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-_main 2FAE 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+_main 2FA4 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-start 1E 0 CODE 0 init C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
+start 1E 0 CODE 0 init C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
 ttemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -194,12 +197,12 @@ ttemp1 81 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-intlevel1 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-intlevel2 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-intlevel3 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-intlevel4 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-intlevel5 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
+intlevel0 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+intlevel1 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+intlevel2 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+intlevel3 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+intlevel4 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+intlevel5 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 wtemp2 82 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -219,7 +222,7 @@ __size_of_onInterrupt 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.pro
 start_initialization 22 0 CODE 0 cinit dist/default/production\PIC_Audio_Player.X.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _TMR0IF 5A 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
+___int_sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -354,7 +357,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
@@ -378,7 +381,7 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 2FAE 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
+__pmaintext 2FA4 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lcommon 0 0 ABS 0 common -
@@ -387,8 +390,8 @@ __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.o
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _onInterrupt 8 0 CODE 0 intentry dist/default/production\PIC_Audio_Player.X.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
-stacklo 2000 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s8dk.obj
+stackhi 23EF 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
+stacklo 2000 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s9io.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -401,7 +404,7 @@ __Hintentry 1E 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__ptext1 2FB6 0 CODE 0 text1 dist/default/production\PIC_Audio_Player.X.production.obj
+__ptext1 2FAC 0 CODE 0 text1 dist/default/production\PIC_Audio_Player.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __pstringtext 2A 0 STRCODE 0 stringtext dist/default/production\PIC_Audio_Player.X.production.obj
@@ -413,7 +416,10 @@ __Lclrtext 0 0 ABS 0 clrtext -
 __CFG_PLLEN$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\PIC_Audio_Player.X.production.obj
 __Hend_init 22 0 CODE 0 end_init -
-__end_of_main 2FB6 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
+__end_of_main 2FAC 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
+_IOCAF 393 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
+_IOCAN 392 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
+_IOCAP 391 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _T2CON 1C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _TRISA 8C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _TRISC 8E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -422,7 +428,7 @@ __end_of_sound 2F0A 0 STRCODE 0 stringtext dist/default/production\PIC_Audio_Pla
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-_setup 2FB6 0 CODE 0 text1 dist/default/production\PIC_Audio_Player.X.production.obj
+_setup 2FAC 0 CODE 0 text1 dist/default/production\PIC_Audio_Player.X.production.obj
 _CCP1CON 293 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\PIC_Audio_Player.X.production.obj
 _CCPTMRS 29E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -455,8 +461,8 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 17DB 2FB6 25 2
-maintext 0 17D7 2FAE 4 2
+text1 0 17D6 2FAC 2A 2
+maintext 0 17D2 2FA4 4 2
 cstackCOMMON 1 70 70 1 1
 intentry 0 4 8 11 2
 reset_vec 0 0 0 2 2

@@ -29,6 +29,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _T2CON `Vuc ~T0 @X0 0 e@28 ]
 "337
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
+"5119
+[v _IOCAP `Vuc ~T0 @X0 0 e@913 ]
+"5176
+[v _IOCAN `Vuc ~T0 @X0 0 e@914 ]
+"5233
+[v _IOCAF `Vuc ~T0 @X0 0 e@915 ]
 [p mainexit ]
 "6864
 [v _TMR0IF `Vb ~T0 @X0 0 e@90 ]
@@ -9709,56 +9715,65 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 61: T2CON = 0x04;
 "61
 [e = _T2CON -> -> 4 `i `uc ]
-[; ;main.c: 64: INTCON = 0xA4;
+[; ;main.c: 64: INTCON = 0xA8;
 "64
-[e = _INTCON -> -> 164 `i `uc ]
-[; ;main.c: 65: }
+[e = _INTCON -> -> 168 `i `uc ]
+[; ;main.c: 65: IOCAP = 0x00;
 "65
+[e = _IOCAP -> -> 0 `i `uc ]
+[; ;main.c: 66: IOCAN = 0x10;
+"66
+[e = _IOCAN -> -> 16 `i `uc ]
+[; ;main.c: 67: IOCAF = 0x00;
+"67
+[e = _IOCAF -> -> 0 `i `uc ]
+[; ;main.c: 68: }
+"68
 [e :UE 324 ]
 }
-"68
+"71
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 68: void main() {
+[; ;main.c: 71: void main() {
 [e :U _main ]
 [f ]
-[; ;main.c: 69: setup();
-"69
-[e ( _setup ..  ]
-[; ;main.c: 72: while (1) {
+[; ;main.c: 72: setup();
 "72
+[e ( _setup ..  ]
+[; ;main.c: 75: while (1) {
+"75
 [e :U 327 ]
 {
-"74
+"77
 }
 [e :U 326 ]
-"72
+"75
 [e $U 327  ]
 [e :U 328 ]
-[; ;main.c: 74: }
-[; ;main.c: 75: }
-"75
+[; ;main.c: 77: }
+[; ;main.c: 78: }
+"78
 [e :UE 325 ]
 }
 [v F2664 `(v ~T0 @X0 1 tf ]
-"82
+"85
 [v _onInterrupt `IF2664 ~T0 @X0 1 e ]
 {
-[; ;main.c: 82: void interrupt onInterrupt() {
+[; ;main.c: 85: void interrupt onInterrupt() {
 [e :U _onInterrupt ]
 [f ]
-[; ;main.c: 84: if (TMR0IF) {
-"84
+[; ;main.c: 87: if (TMR0IF) {
+"87
 [e $ ! _TMR0IF 330  ]
 {
-[; ;main.c: 85: TMR0IF = 0x00;
-"85
-[e = _TMR0IF -> -> 0 `i `b ]
+[; ;main.c: 88: TMR0IF = 0x00;
 "88
+[e = _TMR0IF -> -> 0 `i `b ]
+"91
 }
 [e :U 330 ]
-[; ;main.c: 88: }
-[; ;main.c: 89: }
-"89
+[; ;main.c: 91: }
+[; ;main.c: 92: }
+"92
 [e :UE 329 ]
 }

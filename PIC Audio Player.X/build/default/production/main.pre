@@ -4085,7 +4085,10 @@ CCP1CON = 0x0C;
 T2CON = 0x04;
 
 
-INTCON = 0xA4;
+INTCON = 0xA8;
+IOCAP = 0x00;
+IOCAN = 0x10;
+IOCAF = 0x00;
 }
 
 
@@ -4098,7 +4101,7 @@ while (1) {
 }
 }
 
-# 82
+# 85
 void interrupt onInterrupt() {
 
 if (TMR0IF) {

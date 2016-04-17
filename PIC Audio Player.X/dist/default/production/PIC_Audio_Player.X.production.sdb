@@ -13,9 +13,9 @@
 [v _memcpyee memcpyee `(v  1 e 0 0 ]
 "41 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _setup setup `(v  1 e 0 0 ]
-"68
+"71
 [v _main main `(v  1 e 0 0 ]
-"82
+"85
 [v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
 "337 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1825.h
 [v _INTCON INTCON `VEuc  1 e 1 @11 ]
@@ -47,20 +47,26 @@
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
 "4704
 [v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
+"5119
+[v _IOCAP IOCAP `VEuc  1 e 1 @913 ]
+"5176
+[v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
+"5233
+[v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
 "6864
 [v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
-"68 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+"71 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"75
+"78
 } 0
 "41
 [v _setup setup `(v  1 e 0 0 ]
 {
-"65
+"68
 } 0
-"82
+"85
 [v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
 {
-"89
+"92
 } 0

@@ -2,8 +2,8 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 13, 2016 at 3:20 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 17, 2016 at 11:27 AM               *
- *  Last modification made was: Ported code over to work for the PIC16F1825        *
+ *  Last modification by mikemadealarms on April 17, 2016 at 11:36 AM              *
+ *  Last modification made was: Finished interrupt initialization.                 *
  ***********************************************************************************/
 
 #include <xc.h>
@@ -61,7 +61,10 @@ void setup() {
     T2CON = 0x04;    //Configure and enable Timer2 to run with no pre and post scaler
     
     //Configure Interrupt Related Registers
-    INTCON = 0xA4;
+    INTCON = 0xA8;  //Configure interrupts to be triggered from Timer0 overflowing, and interrupt on change triggers from PORTA
+    IOCAP = 0x00;   //Disable all positive edge interrupt on change triggers on PORTA
+    IOCAN = 0x10;   //Enable the negative edge interrupt on change trigger on PORTA4 and disable it for the rest of PORTA
+    IOCAF = 0x00;   //Clear all the interrupt on change flags for PORTA
 }
 
 //Main Function, called upon reset of the PIC MCU
