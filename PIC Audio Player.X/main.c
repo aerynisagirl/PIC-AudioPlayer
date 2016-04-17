@@ -2,11 +2,13 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 13, 2016 at 3:20 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 16, 2016 at 4:42 AM               *
- *  Last modification made was: Modified comments and added ISP method.            *
+ *  Last modification by mikemadealarms on April 17, 2016 at 11:27 AM               *
+ *  Last modification made was: Ported code over to work for the PIC16F1825        *
  ***********************************************************************************/
 
 #include <xc.h>
+
+#include "sound.h"
 
 /***********************
  *  MCU Configuration  *
@@ -42,14 +44,20 @@ void setup() {
     OPTION_REG = 0x5F;  //Enable the use of the 20K ohm internal pull-up resistors and enable Timer0
     
     //Configure IO Related Modules and IO Ports
-    TRISA = 0x3A;   //Set PORTA0 and PORTA2 to outputs and leave the rest as inputs
+    TRISA = 0x3F;   //Set all of PORTA to inputs
     ANSELA = 0x00;  //Set all of PORTA to digital IO rather than analog inputs
-    WPUA = 0x02;    //Enable the 20K ohm internal weak pull-up resistor on PORTA1
+    WPUA = 0x10;    //Enable the 20K ohm internal weak pull-up resistor on PORTA4
     LATA = 0x00;    //Clear LATA so none of PORTA is in the logic high state
     
+    TRISC = 0x1F;   //Set PORTC5 to an output and leave the rest of PORTC as inputs
+    ANSELC = 0x00;  //Set all of PORTC to digital IO rather than analog inputs
+    WPUC = 0x00;    //Disable the 20K ohm internal weak pull-up resistors on all of PORTC
+    LATC = 0x00;    //Clear LATC so none of PORTC is in the logic high state
+    
     //Configure PWM Related Registers
-    PR2 = 0x4F;      //Set the Timer2 comparator value to trigger the interrupt used by the CCP module
-    CCP1CON = 0x0C;  //Configure the CCP module on the PIC MCU to run in single output active-high PWM mode
+    CCPTMRS = 0x00;  //Set all the CCP modules to use Timer2 for running in PWM
+    PR2 = 0x4F;      //Set the Timer2 comparator value to trigger the interrupt used by the CCP 1 module
+    CCP1CON = 0x0C;  //Configure the CCP 1 module on the PIC MCU to run in single output active-high PWM mode
     T2CON = 0x04;    //Configure and enable Timer2 to run with no pre and post scaler
     
     //Configure Interrupt Related Registers

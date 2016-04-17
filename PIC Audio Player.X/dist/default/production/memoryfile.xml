@@ -3,15 +3,15 @@
   <executable name="dist/default/production\PIC_Audio_Player.X.production.hex">
     <memory name="program">
       <units>words</units>
-      <length>4096</length>
-      <used>24</used>
-      <free>4072</free>
+      <length>8192</length>
+      <used>6058</used>
+      <free>2134</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>256</length>
-      <used>2</used>
-      <free>254</free>
+      <length>1024</length>
+      <used>3</used>
+      <free>1021</free>
     </memory>
   </executable>
 </project>

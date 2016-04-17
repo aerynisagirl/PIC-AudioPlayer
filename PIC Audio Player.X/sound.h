@@ -2,14 +2,17 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 16, 2016 at 5:45 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 16, 2016 at 6:00 PM               *
- *  Last modification made was: Add in the converted PCM to hex codes              *
+ *  Last modification by mikemadealarms on April 17, 2016 at 11:11 AM              *
+ *  Last modification made was: Cleaned up file after screwing with it for a bit.  *
  ***********************************************************************************/
 
 #include <xc.h>
 
+#ifndef SOUND_H
+#define SOUND_H
+
 //Variable that stores the audio samples used by the PIC MCU for playback of the message
-const unsigned char sound[6000] = {
+const char sound[] = {
   0x80, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F,
   0x7F, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7D, 0x7D, 0x7D, 0x7D,
   0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x80,
@@ -511,3 +514,5 @@ const unsigned char sound[6000] = {
   0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F,
   0x7F, 0x7F, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80, 0x80
 };
+
+#endif

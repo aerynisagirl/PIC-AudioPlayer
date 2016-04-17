@@ -1,7 +1,7 @@
 [p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
 [d version 1.1 ]
 [d edition pro ]
-[d chip 12F1840 ]
+[d chip 16F1825 ]
 [d frameptr 6 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
@@ -11,29 +11,56 @@
 [v _eecpymem eecpymem `(v  1 e 0 0 ]
 "24
 [v _memcpyee memcpyee `(v  1 e 0 0 ]
-"39 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+"41 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _setup setup `(v  1 e 0 0 ]
-"54
+"68
 [v _main main `(v  1 e 0 0 ]
-"973 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic12f1840.h
+"82
+[v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
+"337 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1825.h
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+"884
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"903
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+"1077
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1122
+"1126
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1325
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
-"1369
+"1572
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-"1689
+"1898
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-"2341
+"1942
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2673
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2913
+"2719
+[v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
+"3205
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
-"54 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+"3262
+[v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"4032
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+"4704
+[v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
+"6864
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"68 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"58
+"75
 } 0
-"39
+"41
 [v _setup setup `(v  1 e 0 0 ]
 {
-"51
+"65
+} 0
+"82
+[v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
+{
+"89
 } 0
