@@ -11,11 +11,11 @@
 [v _eecpymem eecpymem `(v  1 e 0 0 ]
 "24
 [v _memcpyee memcpyee `(v  1 e 0 0 ]
-"41 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+"50 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _setup setup `(v  1 e 0 0 ]
-"71
+"84
 [v _main main `(v  1 e 0 0 ]
-"85
+"98
 [v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
 "337 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic16f1825.h
 [v _INTCON INTCON `VEuc  1 e 1 @11 ]
@@ -43,8 +43,26 @@
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3262
 [v _WPUC WPUC `VEuc  1 e 1 @526 ]
+"3994
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
 "4032
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+[s S38 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+"4054
+[s S47 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+[u S51 . 1 `S38 1 . 1 0 `S47 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES51  1 e 1 @659 ]
 "4704
 [v _CCPTMRS CCPTMRS `VEuc  1 e 1 @670 ]
 "5119
@@ -53,20 +71,32 @@
 [v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
 "5233
 [v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
+"6436
+[v _IOCAF4 IOCAF4 `VEb  1 e 0 @7324 ]
 "6864
 [v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
-"71 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+"6924
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1141 ]
+"41 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+[v _isAudioPlaying isAudioPlaying `uc  1 e 1 0 ]
+"42
+[v _currentSample currentSample `us  1 e 2 0 ]
+"43
+[v _currentSampleValue currentSampleValue `uc  1 e 1 0 ]
+"17 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\sound.h
+[v _sound sound `DCC[6000]uc  1 e 6000 0 ]
+"84 C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"78
+"91
 } 0
-"41
+"50
 [v _setup setup `(v  1 e 0 0 ]
 {
-"68
+"81
 } 0
-"85
+"98
 [v _onInterrupt onInterrupt `II(v  1 e 0 0 ]
 {
-"92
+"141
 } 0

@@ -3537,7 +3537,7 @@ extern unsigned char __resetbits;
 extern __bit __powerdown;
 extern __bit __timeout;
 
-# 15 "sound.h"
+# 17 "sound.h"
 const char sound[] = {
 0x80, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F, 0x7F,
 0x7F, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7E, 0x7D, 0x7D, 0x7D, 0x7D,
@@ -4062,6 +4062,11 @@ const char sound[] = {
 #pragma config LVP = OFF
 
 # 41
+unsigned char isAudioPlaying = 0x00;
+unsigned short currentSample = 0x0000;
+unsigned char currentSampleValue = 0x00;
+
+# 50
 void setup() {
 
 OSCCON = 0x70;
@@ -4073,7 +4078,7 @@ ANSELA = 0x00;
 WPUA = 0x10;
 LATA = 0x00;
 
-TRISC = 0x1F;
+TRISC = 0x3F;
 ANSELC = 0x00;
 WPUC = 0x00;
 LATC = 0x00;
@@ -4089,6 +4094,10 @@ INTCON = 0xA8;
 IOCAP = 0x00;
 IOCAN = 0x10;
 IOCAF = 0x00;
+
+
+isAudioPlaying = 0x00;
+currentSample = 0x000;
 }
 
 
@@ -4101,12 +4110,48 @@ while (1) {
 }
 }
 
-# 85
+# 98
 void interrupt onInterrupt() {
 
 if (TMR0IF) {
 TMR0IF = 0x00;
 
 
+if (isAudioPlaying) {
+
+if (currentSample != 6000) {
+
+currentSampleValue = sound[currentSample];
+currentSample++;
+
+
+CCP1CONbits.DC1B = currentSampleValue;
+CCPR1L = currentSampleValue >> 2;
+} else {
+
+isAudioPlaying = 0x00;
+currentSample = 0x00;
+currentSampleValue = 0x00;
+
+
+TRISC5 = 0x01;
+}
+}
+}
+
+
+if (IOCAF4) {
+IOCAF4 = 0x00;
+
+
+if (!isAudioPlaying) {
+
+isAudioPlaying = 0xFF;
+currentSample = 0x00;
+currentSampleValue = 0x00;
+
+
+TRISC5 = 0x00;
+}
 }
 }

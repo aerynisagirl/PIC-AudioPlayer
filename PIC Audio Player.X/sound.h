@@ -2,14 +2,16 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 16, 2016 at 5:45 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 17, 2016 at 11:11 AM              *
- *  Last modification made was: Cleaned up file after screwing with it for a bit.  *
+ *  Last modification by mikemadealarms on April 17, 2016 at 12:15 PM              *
+ *  Last modification made was: Added a constant used for playing the recording    *
  ***********************************************************************************/
 
 #include <xc.h>
 
 #ifndef SOUND_H
 #define SOUND_H
+
+#define TOTAL_SAMPLES 6000  //The total number of samples within the audio recording
 
 //Variable that stores the audio samples used by the PIC MCU for playback of the message
 const char sound[] = {
