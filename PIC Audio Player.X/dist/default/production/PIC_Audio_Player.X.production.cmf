@@ -11,6 +11,10 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
+$C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 53 53 2 2
+config CONFIG 0 8007 8007 2 2
 $dist/default/production\PIC_Audio_Player.X.production.obj
 cinit CODE 0 55 55 8 2
 text1 CODE 0 17D3 17D3 2D 2
@@ -19,10 +23,6 @@ cstackCOMMON COMMON 1 74 74 2 1
 intentry CODE 0 4 4 4F 2
 stringtext STRCODE 0 5D 5D 1770 2
 bssCOMMON COMMON 1 70 70 4 1
-$C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 53 53 2 2
-config CONFIG 0 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -121,16 +121,16 @@ STRING 1800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\PIC_Audio_Player.X.production.obj
-55 cinit CODE >6445:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-55 cinit CODE >6448:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-55 cinit CODE >6466:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-56 cinit CODE >6467:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-57 cinit CODE >6468:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-58 cinit CODE >6469:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-59 cinit CODE >6475:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-59 cinit CODE >6477:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-5A cinit CODE >6478:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
-5B cinit CODE >6479:C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
+55 cinit CODE >6445:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+55 cinit CODE >6448:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+55 cinit CODE >6466:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+56 cinit CODE >6467:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+57 cinit CODE >6468:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+58 cinit CODE >6469:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+59 cinit CODE >6475:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+59 cinit CODE >6477:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+5A cinit CODE >6478:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
+5B cinit CODE >6479:C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
 4 intentry CODE >98:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 9 intentry CODE >100:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 B intentry CODE >101:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
@@ -170,7 +170,7 @@ F intentry CODE >106:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Au
 17F2 text1 CODE >70:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 17F5 text1 CODE >73:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 17F7 text1 CODE >74:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
-17F9 text1 CODE >75:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
+17FA text1 CODE >75:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 17FB text1 CODE >76:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 17FC text1 CODE >79:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
 17FD text1 CODE >80:C:\Users\Mac Freak\Documents\GitHub\PIC-Audio-Player\PIC Audio Player.X\main.c
@@ -208,11 +208,11 @@ _LATA 10C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _LATC 10E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _WPUC 20E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+___sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 _main 2F9E 0 CODE 0 maintext dist/default/production\PIC_Audio_Player.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ltemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-start A6 0 CODE 0 init C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+start A6 0 CODE 0 init C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 ttemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 wtemp 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -223,12 +223,12 @@ ttemp1 81 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp2 84 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp3 87 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-intlevel1 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-intlevel2 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-intlevel3 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-intlevel4 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-intlevel5 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+intlevel0 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+intlevel1 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+intlevel2 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+intlevel3 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+intlevel4 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+intlevel5 0 0 CODE 0 functab C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 wtemp1 80 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -244,7 +244,7 @@ _ANSELC 18E 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _CCPR1L 291 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 _INTCON B 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
-_IOCAF4 1C9C 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
+_IOCAF0 1C98 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _OPTION_REG 95 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __size_of_setup 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __size_of_onInterrupt 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
@@ -253,7 +253,7 @@ _OSCCON 99 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _TMR0IF 5A 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _TRISC5 475 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _isAudioPlaying 73 0 COMMON 1 bssCOMMON dist/default/production\PIC_Audio_Player.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+___int_sp 0 0 STACK 2 stack C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -389,7 +389,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
@@ -422,8 +422,8 @@ __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.o
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 _onInterrupt 8 0 CODE 0 intentry dist/default/production\PIC_Audio_Player.X.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
-stacklo 2000 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s4es.obj
+stackhi 23EF 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
+stacklo 2000 0 ABS 0 - C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production\PIC_Audio_Player.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -

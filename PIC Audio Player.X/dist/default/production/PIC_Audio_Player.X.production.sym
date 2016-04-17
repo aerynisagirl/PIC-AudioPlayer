@@ -52,7 +52,7 @@ _sound 5D 0 STRCODE 0
 __CFG_STVREN$ON 0 0 ABS 0
 _setup 17D3 0 CODE 0
 int$flags 7E 0 ABS 0
-_IOCAF4 1C9C 0 ABS 0
+_IOCAF0 1C98 0 ABS 0
 __Hfunctab 0 0 CODE 0
 __Lfunctab 0 0 CODE 0
 _TRISC5 475 0 ABS 0
@@ -290,7 +290,7 @@ text1 2FA6 2FFF CODE 2FA6 0
 maintext 2F9E 2FA5 CODE 2F9E 0
 %locals
 dist/default/production\PIC_Audio_Player.X.production.obj
-C:\Users\MACFRE~1\AppData\Local\Temp\s4es.
+C:\Users\MACFRE~1\AppData\Local\Temp\s4jk.
 6445 55 0 CODE 0
 6448 55 0 CODE 0
 6466 55 0 CODE 0
@@ -322,7 +322,7 @@ main.c
 70 17F2 0 CODE 0
 73 17F5 0 CODE 0
 74 17F7 0 CODE 0
-75 17F9 0 CODE 0
+75 17FA 0 CODE 0
 76 17FB 0 CODE 0
 79 17FC 0 CODE 0
 80 17FD 0 CODE 0

@@ -53,8 +53,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _CCPR1L `Vuc ~T0 @X0 0 e@657 ]
 "6924
 [v _TRISC5 `Vb ~T0 @X0 0 e@1141 ]
-"6436
-[v _IOCAF4 `Vb ~T0 @X0 0 e@7324 ]
+"6428
+[v _IOCAF0 `Vb ~T0 @X0 0 e@7320 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -9720,9 +9720,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 57: ANSELA = 0x00;
 "57
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 58: WPUA = 0x10;
+[; ;main.c: 58: WPUA = 0x01;
 "58
-[e = _WPUA -> -> 16 `i `uc ]
+[e = _WPUA -> -> 1 `i `uc ]
 [; ;main.c: 59: LATA = 0x00;
 "59
 [e = _LATA -> -> 0 `i `uc ]
@@ -9753,12 +9753,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 73: INTCON = 0xA8;
 "73
 [e = _INTCON -> -> 168 `i `uc ]
-[; ;main.c: 74: IOCAP = 0x00;
+[; ;main.c: 74: IOCAP = 0x01;
 "74
-[e = _IOCAP -> -> 0 `i `uc ]
-[; ;main.c: 75: IOCAN = 0x10;
+[e = _IOCAP -> -> 1 `i `uc ]
+[; ;main.c: 75: IOCAN = 0x00;
 "75
-[e = _IOCAN -> -> 16 `i `uc ]
+[e = _IOCAN -> -> 0 `i `uc ]
 [; ;main.c: 76: IOCAF = 0x00;
 "76
 [e = _IOCAF -> -> 0 `i `uc ]
@@ -9860,13 +9860,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 122: }
 [; ;main.c: 123: }
 [; ;main.c: 124: }
-[; ;main.c: 127: if (IOCAF4) {
+[; ;main.c: 127: if (IOCAF0) {
 "127
-[e $ ! _IOCAF4 334  ]
+[e $ ! _IOCAF0 334  ]
 {
-[; ;main.c: 128: IOCAF4 = 0x00;
+[; ;main.c: 128: IOCAF0 = 0x00;
 "128
-[e = _IOCAF4 -> -> 0 `i `b ]
+[e = _IOCAF0 -> -> 0 `i `b ]
 [; ;main.c: 131: if (!isAudioPlaying) {
 "131
 [e $ ! ! != -> _isAudioPlaying `i -> -> -> 0 `i `uc `i 335  ]

@@ -2,8 +2,8 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 13, 2016 at 3:20 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 17, 2016 at 12:25 PM              *
- *  Last modification made was: Added in the code used for audio playback          *
+ *  Last modification by mikemadealarms on April 17, 2016 at 2:45 PM               *
+ *  Last modification made was: Updated it to work with demo board                 *
  ***********************************************************************************/
 
 #include <xc.h>
@@ -55,7 +55,7 @@ void setup() {
     //Configure IO Related Modules and IO Ports
     TRISA = 0x3F;   //Set all of PORTA to inputs
     ANSELA = 0x00;  //Set all of PORTA to digital IO rather than analog inputs
-    WPUA = 0x10;    //Enable the 20K ohm internal weak pull-up resistor on PORTA4
+    WPUA = 0x01;    //Enable the 20K ohm internal weak pull-up resistor on PORTA0
     LATA = 0x00;    //Clear LATA so none of PORTA is in the logic high state
     
     TRISC = 0x3F;   //Set all of PORTC to inputs, this disables output to PORTC5 which is used to drive the speaker for playback
@@ -71,8 +71,8 @@ void setup() {
     
     //Configure Interrupt Related Registers
     INTCON = 0xA8;  //Configure interrupts to be triggered from Timer0 overflowing, and interrupt on change triggers from PORTA
-    IOCAP = 0x00;   //Disable all positive edge interrupt on change triggers on PORTA
-    IOCAN = 0x10;   //Enable the negative edge interrupt on change trigger on PORTA4 and disable it for the rest of PORTA
+    IOCAP = 0x01;   //Disable all positive edge interrupt on change triggers on PORTA
+    IOCAN = 0x00;   //Enable the negative edge interrupt on change trigger on PORTA0 and disable it for the rest of PORTA
     IOCAF = 0x00;   //Clear all the interrupt on change flags for PORTA
     
     //Initialize Variables
@@ -124,8 +124,8 @@ void interrupt onInterrupt() {
     }
     
     //Check to see if the interrupt was caused by PORTA4 triggering an interrupt from a falling edge
-    if (IOCAF4) {
-        IOCAF4 = 0x00;  //Clear the interrupt on change flag for PORTA4 to prevent false interrupts in the future
+    if (IOCAF0) {
+        IOCAF0 = 0x00;  //Clear the interrupt on change flag for PORTA0 to prevent false interrupts in the future
         
         //Check to see if the audio sample isn't already being played
         if (!isAudioPlaying) {

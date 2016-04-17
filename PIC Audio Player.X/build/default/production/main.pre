@@ -4075,7 +4075,7 @@ OPTION_REG = 0x5F;
 
 TRISA = 0x3F;
 ANSELA = 0x00;
-WPUA = 0x10;
+WPUA = 0x01;
 LATA = 0x00;
 
 TRISC = 0x3F;
@@ -4091,8 +4091,8 @@ T2CON = 0x04;
 
 
 INTCON = 0xA8;
-IOCAP = 0x00;
-IOCAN = 0x10;
+IOCAP = 0x01;
+IOCAN = 0x00;
 IOCAF = 0x00;
 
 
@@ -4140,8 +4140,8 @@ TRISC5 = 0x01;
 }
 
 
-if (IOCAF4) {
-IOCAF4 = 0x00;
+if (IOCAF0) {
+IOCAF0 = 0x00;
 
 
 if (!isAudioPlaying) {
