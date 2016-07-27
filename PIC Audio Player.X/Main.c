@@ -46,7 +46,7 @@ unsigned char currentSampleValue = 0x00;  //The value of the current sample that
  *  Processing  *
  ****************/
 
-//Setup Function, initializes the MCU and prepares it for the various tasks it will perform
+//Setup Function, initializes the PIC MCU and prepares it for the various tasks it will perform
 void setup() {
     //Configure Timing Related Modules
     OSCCON = 0x70;      //Set the internal oscillator to run at 8MHz and disable the internal 4x PLL
@@ -85,7 +85,7 @@ void main() {
     setup();  //Call setup function to initialize the PIC MCU
     
     //Run in a continuous loop until the end of time (Or the PIC MCU is reset)
-    while (1) {
+    while (0x01) {
         //Do absolutely nothing
     }
 }
