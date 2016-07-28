@@ -2,8 +2,8 @@
  *  PIC Audio Player - A simple single chip solution to playing small audio files  *
  *  Created by mikemadealarms on April 13, 2016 at 3:20 PM                         *
  * ------------------------------------------------------------------------------- *
- *  Last modification by mikemadealarms on April 17, 2016 at 2:45 PM               *
- *  Last modification made was: Updated it to work with demo board                 *
+ *  Last modification by mikemadealarms on July 28, 2016 at 11:45 AM               *
+ *  Last modification made was: Cleaned through comments, OCD is annoying          *
  ***********************************************************************************/
 
 #include <xc.h>
@@ -42,9 +42,9 @@ unsigned char isAudioPlaying = 0x00;      //Controls whether or not the audio sa
 unsigned short currentSample = 0x0000;    //The current sample of the audio recording being outputted
 unsigned char currentSampleValue = 0x00;  //The value of the current sample that is being outputted
 
-/****************
- *  Processing  *
- ****************/
+/***********
+ *  Setup  *
+ ***********/
 
 //Setup Function, initializes the PIC MCU and prepares it for the various tasks it will perform
 void setup() {
@@ -79,6 +79,10 @@ void setup() {
     isAudioPlaying = 0x00;  //Clear the variable isAudioPlaying to prevent the audio sample from playing
     currentSample = 0x000;  //Clear the variable so the audio sample is played from the beginning.
 }
+
+/****************
+ *  Processing  *
+ ****************/
 
 //Main Function, called upon reset of the PIC MCU
 void main() {
